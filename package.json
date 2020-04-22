@@ -63,7 +63,7 @@
   "bugs": {
     "url": "https://github.com/sanjeetkum/ecartnew/issues"
   },
-  "homepage": "https:/sanjeetkum.github.io/ecartnew",
+  "homepage": ".",
   "browserslist": {
     "production": [
       ">0.2%",
