@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/sanjeetkum/shoppingcart/static/css/main.7bfcca87.chunk.css",
-    "main.js": "/sanjeetkum/shoppingcart/static/js/main.eea0429e.chunk.js",
-    "main.js.map": "/sanjeetkum/shoppingcart/static/js/main.eea0429e.chunk.js.map",
-    "runtime-main.js": "/sanjeetkum/shoppingcart/static/js/runtime-main.c6067d97.js",
-    "runtime-main.js.map": "/sanjeetkum/shoppingcart/static/js/runtime-main.c6067d97.js.map",
-    "static/js/2.ee81b71e.chunk.js": "/sanjeetkum/shoppingcart/static/js/2.ee81b71e.chunk.js",
-    "static/js/2.ee81b71e.chunk.js.map": "/sanjeetkum/shoppingcart/static/js/2.ee81b71e.chunk.js.map",
-    "index.html": "/sanjeetkum/shoppingcart/index.html",
-    "precache-manifest.a574178337bd681d51b11df50a1c6e69.js": "/sanjeetkum/shoppingcart/precache-manifest.a574178337bd681d51b11df50a1c6e69.js",
-    "service-worker.js": "/sanjeetkum/shoppingcart/service-worker.js",
-    "static/css/main.7bfcca87.chunk.css.map": "/sanjeetkum/shoppingcart/static/css/main.7bfcca87.chunk.css.map",
-    "static/js/2.ee81b71e.chunk.js.LICENSE.txt": "/sanjeetkum/shoppingcart/static/js/2.ee81b71e.chunk.js.LICENSE.txt",
-    "static/media/bare-tree.png": "/sanjeetkum/shoppingcart/static/media/bare-tree.65444c77.png",
-    "static/media/logo.svg": "/sanjeetkum/shoppingcart/static/media/logo.5d5d9eef.svg"
+    "main.css": "/sanjeetkum/ecartnew/static/css/main.7bfcca87.chunk.css",
+    "main.js": "/sanjeetkum/ecartnew/static/js/main.b2587cef.chunk.js",
+    "main.js.map": "/sanjeetkum/ecartnew/static/js/main.b2587cef.chunk.js.map",
+    "runtime-main.js": "/sanjeetkum/ecartnew/static/js/runtime-main.b494f51d.js",
+    "runtime-main.js.map": "/sanjeetkum/ecartnew/static/js/runtime-main.b494f51d.js.map",
+    "static/js/2.4368be0c.chunk.js": "/sanjeetkum/ecartnew/static/js/2.4368be0c.chunk.js",
+    "static/js/2.4368be0c.chunk.js.map": "/sanjeetkum/ecartnew/static/js/2.4368be0c.chunk.js.map",
+    "index.html": "/sanjeetkum/ecartnew/index.html",
+    "precache-manifest.f0e2ba6082a456e54384a0615172ed19.js": "/sanjeetkum/ecartnew/precache-manifest.f0e2ba6082a456e54384a0615172ed19.js",
+    "service-worker.js": "/sanjeetkum/ecartnew/service-worker.js",
+    "static/css/main.7bfcca87.chunk.css.map": "/sanjeetkum/ecartnew/static/css/main.7bfcca87.chunk.css.map",
+    "static/js/2.4368be0c.chunk.js.LICENSE.txt": "/sanjeetkum/ecartnew/static/js/2.4368be0c.chunk.js.LICENSE.txt",
+    "static/media/bare-tree.png": "/sanjeetkum/ecartnew/static/media/bare-tree.65444c77.png",
+    "static/media/logo.svg": "/sanjeetkum/ecartnew/static/media/logo.5d5d9eef.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.c6067d97.js",
-    "static/js/2.ee81b71e.chunk.js",
+    "static/js/runtime-main.b494f51d.js",
+    "static/js/2.4368be0c.chunk.js",
     "static/css/main.7bfcca87.chunk.css",
-    "static/js/main.eea0429e.chunk.js"
+    "static/js/main.b2587cef.chunk.js"
   ]
 }
