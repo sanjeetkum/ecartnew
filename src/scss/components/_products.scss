@@ -1,12 +1,12 @@
 .products-wrapper {
-  padding-top: 98px;
+  padding-top: 0px;
   animation: slideUp 300ms linear;
   animation-delay: 150ms;
   @media (max-width: 991px) {
-    padding-top: 68px;
+    padding-top: 0px;
   }
   @media (max-width: 480px) {
-    padding-top: 52px;
+    padding-top: 0px;
   }
 }
 .products {

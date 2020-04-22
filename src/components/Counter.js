@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Counter extends Component {
   constructor(props) {
@@ -11,10 +11,10 @@ class Counter extends Component {
 
   increment(e) {
     this.setState(
-      prevState => ({
-        value: Number(prevState.value) + 1
+      (prevState) => ({
+        value: Number(prevState.value) + 1,
       }),
-      function() {
+      function () {
         this.props.updateQuantity(this.state.value);
       }
     );
@@ -27,10 +27,10 @@ class Counter extends Component {
       return this.state.value;
     } else {
       this.setState(
-        prevState => ({
-          value: Number(prevState.value) - 1
+        (prevState) => ({
+          value: Number(prevState.value) - 1,
         }),
-        function() {
+        function () {
           this.props.updateQuantity(this.state.value);
         }
       );
@@ -40,9 +40,9 @@ class Counter extends Component {
   feed(e) {
     this.setState(
       {
-        value: this.refs.feedQty.value
+        value: this.refs.feedQty.value,
       },
-      function() {
+      function () {
         this.props.updateQuantity(this.state.value);
       }
     );
@@ -50,13 +50,13 @@ class Counter extends Component {
 
   resetQuantity() {
     this.setState({
-      value: 1
+      value: 1,
     });
   }
   render() {
     return (
       <div className="stepper-input">
-        <a href="#" className="decrement" onClick={this.decrement}>
+        <a href="www.google.com" className="decrement" onClick={this.decrement}>
           –
         </a>
         <input
@@ -75,7 +75,7 @@ class Counter extends Component {
 }
 
 Counter.propTypes = {
-  value: PropTypes.number
+  value: PropTypes.number,
 };
 
 export default Counter;

@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Products from './components/Products';
 import Footer from './components/Footer';
 import QuickView from './components/QuickView';
+import Sort from './components/Sort';
 import './scss/style.scss';
 
 class App extends Component {
@@ -33,6 +34,9 @@ class App extends Component {
     this.handleRemoveProduct = this.handleRemoveProduct.bind(this);
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
+    this.handleAscSort = this.handleAscSort.bind(this);
+    this.handleDscSort = this.handleDscSort.bind(this);
+    this.handleDiscountSort = this.handleDiscountSort.bind(this);
   }
   // Fetch Initial Set of Products from external API
   getProducts() {
@@ -51,6 +55,34 @@ class App extends Component {
   handleSearch(event) {
     this.setState({ term: event.target.value });
   }
+  handleAscSort(event) {
+    let ascproducts = [];
+    if (this.state.products[0].price.actual) {
+      ascproducts = this.state.products.sort(function (a, b) {
+        return a.price.actual - b.price.actual;
+      });
+      this.setState({ products: ascproducts });
+    }
+  }
+  handleDscSort(event) {
+    let dscproducts = [];
+    if (this.state.products[0].price.actual) {
+      dscproducts = this.state.products.sort(function (a, b) {
+        return b.price.actual - a.price.actual;
+      });
+      this.setState({ products: dscproducts });
+    }
+  }
+  handleDiscountSort(event) {
+    let discountproducts = [];
+    if (this.state.products[0].price.actual) {
+      discountproducts = this.state.products.sort(function (a, b) {
+        return b.discount - a.discount;
+      });
+      this.setState({ products: discountproducts });
+    }
+  }
+
   // Mobile Search Reset
   handleMobileSearch() {
     this.setState({ term: '' });
@@ -166,6 +198,11 @@ class App extends Component {
           categoryTerm={this.state.category}
           updateQuantity={this.updateQuantity}
           productQuantity={this.state.moq}
+        />
+        <Sort
+          handleAscSort={this.handleAscSort}
+          handleDscSort={this.handleDscSort}
+          handleDiscountSort={this.handleDiscountSort}
         />
         <Products
           productsList={this.state.products}
