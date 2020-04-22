@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/sanjeetkum.github.io/ecartnew/static/css/main.7bfcca87.chunk.css",
+    "main.js": "/sanjeetkum.github.io/ecartnew/static/js/main.b2587cef.chunk.js",
+    "main.js.map": "/sanjeetkum.github.io/ecartnew/static/js/main.b2587cef.chunk.js.map",
+    "runtime-main.js": "/sanjeetkum.github.io/ecartnew/static/js/runtime-main.37f8676a.js",
+    "runtime-main.js.map": "/sanjeetkum.github.io/ecartnew/static/js/runtime-main.37f8676a.js.map",
+    "static/js/2.4368be0c.chunk.js": "/sanjeetkum.github.io/ecartnew/static/js/2.4368be0c.chunk.js",
+    "static/js/2.4368be0c.chunk.js.map": "/sanjeetkum.github.io/ecartnew/static/js/2.4368be0c.chunk.js.map",
+    "index.html": "/sanjeetkum.github.io/ecartnew/index.html",
+    "precache-manifest.c688b2edb4102576ecb60e6ef71da23f.js": "/sanjeetkum.github.io/ecartnew/precache-manifest.c688b2edb4102576ecb60e6ef71da23f.js",
+    "service-worker.js": "/sanjeetkum.github.io/ecartnew/service-worker.js",
+    "static/css/main.7bfcca87.chunk.css.map": "/sanjeetkum.github.io/ecartnew/static/css/main.7bfcca87.chunk.css.map",
+    "static/js/2.4368be0c.chunk.js.LICENSE.txt": "/sanjeetkum.github.io/ecartnew/static/js/2.4368be0c.chunk.js.LICENSE.txt",
+    "static/media/bare-tree.png": "/sanjeetkum.github.io/ecartnew/static/media/bare-tree.65444c77.png",
+    "static/media/logo.svg": "/sanjeetkum.github.io/ecartnew/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.37f8676a.js",
+    "static/js/2.4368be0c.chunk.js",
+    "static/css/main.7bfcca87.chunk.css",
+    "static/js/main.b2587cef.chunk.js"
+  ]
+}
