@@ -55,7 +55,7 @@ class App extends Component {
   handleSearch(event) {
     this.setState({ term: event.target.value });
   }
-  handleAscSort(event) {
+  handleDscSort(event) {
     let ascproducts = [];
     if (this.state.products[0].price.actual) {
       ascproducts = this.state.products.sort(function (a, b) {
@@ -64,7 +64,7 @@ class App extends Component {
       this.setState({ products: ascproducts });
     }
   }
-  handleDscSort(event) {
+  handleAscSort(event) {
     let dscproducts = [];
     if (this.state.products[0].price.actual) {
       dscproducts = this.state.products.sort(function (a, b) {
@@ -81,6 +81,10 @@ class App extends Component {
       });
       this.setState({ products: discountproducts });
     }
+  }
+
+  handlePriceFilter(event) {
+    this.setState({ term: event.target.value });
   }
 
   // Mobile Search Reset

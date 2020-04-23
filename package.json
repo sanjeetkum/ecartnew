@@ -21,6 +21,7 @@
     "font-awesome": "^4.7.0",
     "prop-types": "^15.5.10",
     "react": "^16.0.0",
+    "react-bootstrap-range-slider": "^0.3.2",
     "react-custom-scrollbars": "^4.1.1",
     "react-dom": "^16.0.0",
     "react-fontawesome": "^1.7.1",
