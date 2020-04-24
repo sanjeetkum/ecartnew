@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { findDOMNode } from "react-dom";
+import React, { Component } from 'react';
+import { findDOMNode } from 'react-dom';
 
 class QuickView extends Component {
   constructor(props) {
@@ -7,7 +7,7 @@ class QuickView extends Component {
   }
   componentDidMount() {
     document.addEventListener(
-      "click",
+      'click',
       this.handleClickOutside.bind(this),
       true
     );
@@ -15,7 +15,7 @@ class QuickView extends Component {
 
   componentWillUnmount() {
     document.removeEventListener(
-      "click",
+      'click',
       this.handleClickOutside.bind(this),
       true
     );
@@ -36,7 +36,7 @@ class QuickView extends Component {
     return (
       <div
         className={
-          this.props.openModal ? "modal-wrapper active" : "modal-wrapper"
+          this.props.openModal ? 'modal-wrapper active' : 'modal-wrapper'
         }
       >
         <div className="modal" ref="modal">

@@ -9,11 +9,21 @@
   }
   @media (max-width: 480px) {
     padding-top: 100px;
+    padding-bottom: 10px;
   }
   &__sortpara > a,
   b {
     margin-right: 50px;
     font-weight: bolder;
+  }
+  &__sortpara {
+    margin-bottom: 0;
+    padding: 10px;
+    border-bottom: 2px solid $gray-eighty;
+    @media (max-width: 480px) {
+      padding: 0px;
+      padding-bottom: 10px;
+    }
   }
 
   @media (max-width: 480px) {
@@ -29,7 +39,7 @@
   a:active {
     color: $primary-blue;
   }
-  a[tabindex]:focus {
+  a[tabIndex]:focus {
     color: $primary-blue;
     outline: none;
     text-decoration: underline;

@@ -2,6 +2,11 @@ footer {
   color: $white;
   font-size: 14px;
   text-align: center;
-  padding: 32px;
+  padding: 12px;
   background: $primary-blue;
+  //position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin: auto;
+  //margin-top: 40px;
 }

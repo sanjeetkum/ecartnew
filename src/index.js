@@ -7,6 +7,10 @@ import Footer from './components/Footer';
 import QuickView from './components/QuickView';
 import Sort from './components/Sort';
 import './scss/style.scss';
+import PriceFilter from './components/PriceFilter';
+import { Col, Row } from 'antd';
+import 'antd/es/row/style/css';
+import 'antd/es/col/style/css';
 
 class App extends Component {
   constructor() {
@@ -22,6 +26,10 @@ class App extends Component {
       quantity: 1,
       quickViewProduct: {},
       modalActive: false,
+      filteredData: [],
+      filterUnderProgress: false,
+      min: '',
+      max: '',
     };
     this.handleSearch = this.handleSearch.bind(this);
     this.handleMobileSearch = this.handleMobileSearch.bind(this);
@@ -37,6 +45,8 @@ class App extends Component {
     this.handleAscSort = this.handleAscSort.bind(this);
     this.handleDscSort = this.handleDscSort.bind(this);
     this.handleDiscountSort = this.handleDiscountSort.bind(this);
+    this.handlePriceFilter = this.handlePriceFilter.bind(this);
+    this.handleApplyFilter = this.handleApplyFilter.bind(this);
   }
   // Fetch Initial Set of Products from external API
   getProducts() {
@@ -83,8 +93,28 @@ class App extends Component {
     }
   }
 
-  handlePriceFilter(event) {
-    this.setState({ term: event.target.value });
+  async handlePriceFilter(value) {
+    console.log(value);
+    await this.setState({ min: value[0], max: value[1] });
+    this.getProducts();
+  }
+  async handleApplyFilter() {
+    console.log('min is ' + this.state.min + 'max is ' + this.state.max);
+    this.state.filteredData = [];
+
+    if (this.state.products) {
+      this.state.products.forEach((prodItem) => {
+        if (
+          prodItem.price.actual > this.state.min &&
+          prodItem.price.actual < this.state.max
+        ) {
+          this.state.filteredData.push(prodItem);
+        }
+      });
+      await this.setState({
+        products: [...this.state.filteredData],
+      });
+    }
   }
 
   // Mobile Search Reset
@@ -179,6 +209,7 @@ class App extends Component {
       quickViewProduct: product,
       modalActive: true,
     });
+    console.log('quickViewProduct' + this.state.quickViewProduct);
   }
   // Close Modal
   closeModal() {
@@ -203,19 +234,31 @@ class App extends Component {
           updateQuantity={this.updateQuantity}
           productQuantity={this.state.moq}
         />
-        <Sort
-          handleAscSort={this.handleAscSort}
-          handleDscSort={this.handleDscSort}
-          handleDiscountSort={this.handleDiscountSort}
-        />
-        <Products
-          productsList={this.state.products}
-          searchTerm={this.state.term}
-          addToCart={this.handleAddToCart}
-          productQuantity={this.state.quantity}
-          updateQuantity={this.updateQuantity}
-          openModal={this.openModal}
-        />
+        <Col span={24} className="bg-color">
+          <Sort
+            handleAscSort={this.handleAscSort}
+            handleDscSort={this.handleDscSort}
+            handleDiscountSort={this.handleDiscountSort}
+          />
+        </Col>
+        <Row>
+          <Col lg={{ span: 4 }} xs={{ span: 24 }} className="bg-color">
+            <PriceFilter
+              handlePriceFilter={this.handlePriceFilter}
+              handleApplyFilter={this.handleApplyFilter}
+            />
+          </Col>
+          <Col lg={{ span: 16, offset: 2 }} sm={{ span: 24, offset: 0 }}>
+            <Products
+              productsList={this.state.products}
+              searchTerm={this.state.term}
+              addToCart={this.handleAddToCart}
+              productQuantity={this.state.quantity}
+              updateQuantity={this.updateQuantity}
+              openModal={this.openModal}
+            />
+          </Col>
+        </Row>
         <Footer />
         <QuickView
           product={this.state.quickViewProduct}

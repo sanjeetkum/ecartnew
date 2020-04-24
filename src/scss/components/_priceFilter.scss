@@ -1,0 +1,12 @@
+.priceFilter {
+  padding: 20px;
+
+  &__applyButton {
+    display: flex !important;
+    margin: auto;
+  }
+  .bg-color {
+    background-color: $gray-medium-bg;
+    border-right: 2px solid $gray-eighty;
+  }
+}
