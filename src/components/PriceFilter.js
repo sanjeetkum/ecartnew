@@ -15,13 +15,13 @@ class PriceFilter extends Component {
           style: {
             color: '#ccc',
           },
-          label: <strong>0</strong>,
+          label: <strong>₹0</strong>,
         },
         100000: {
           style: {
             color: '#ccc',
           },
-          label: <strong>100000</strong>,
+          label: <strong>₹100000</strong>,
         },
       },
     };
