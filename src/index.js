@@ -132,7 +132,6 @@ class App extends Component {
     let productID = selectedProducts.id;
     let productQty = selectedProducts.quantity;
     if (this.checkProduct(productID)) {
-      console.log('hi');
       let index = cartItem.findIndex((x) => x.id == productID);
       cartItem[index].quantity =
         Number(cartItem[index].quantity) + Number(productQty);
@@ -177,21 +176,21 @@ class App extends Component {
       return item.id === productID;
     });
   }
-  sumTotalItems() {
+  async sumTotalItems() {
     let total = 0;
     let cart = this.state.cart;
     total = cart.length;
-    this.setState({
+    await this.setState({
       totalItems: total,
     });
   }
-  sumTotalAmount() {
+  async sumTotalAmount() {
     let total = 0;
     let cart = this.state.cart;
     for (var i = 0; i < cart.length; i++) {
       total += cart[i].price * parseInt(cart[i].quantity);
     }
-    this.setState({
+    await this.setState({
       totalAmount: total,
     });
   }

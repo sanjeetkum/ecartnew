@@ -56,6 +56,9 @@ class Header extends Component {
       }
     }
   }
+  handleClick = (event) => {
+    console.log('on checkout click' + event);
+  };
   componentDidMount() {
     document.addEventListener(
       'click',
@@ -109,6 +112,17 @@ class Header extends Component {
           className="cart-items"
         >
           {cartItems}
+          <b
+            style={{
+              padding: 30,
+              color: 'green',
+              display: 'flex',
+              justifyContent: 'center',
+              fontSize: 22,
+            }}
+          >
+            Total Amount : ₹ {this.props.total}
+          </b>
         </CSSTransitionGroup>
       );
     }
@@ -186,6 +200,7 @@ class Header extends Component {
                 <button
                   type="button"
                   className={this.state.cart.length > 0 ? ' ' : 'disabled'}
+                  onClick={this.handleClick}
                 >
                   PROCEED TO CHECKOUT
                 </button>
