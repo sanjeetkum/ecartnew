@@ -50,7 +50,7 @@ class App extends Component {
   }
   // Fetch Initial Set of Products from external API
   getProducts() {
-    let url = 'https://api.jsonbin.io/b/5e9f3352435f5604bb458747/1';
+    let url = 'https://api.jsonbin.io/b/5f0daaf954a3e04bf7cd91d9';
     axios.get(url).then((response) => {
       this.setState({
         products: response.data.items,

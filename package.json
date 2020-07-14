@@ -26,6 +26,7 @@
     "react-custom-scrollbars": "^4.1.1",
     "react-dom": "^16.0.0",
     "react-fontawesome": "^1.7.1",
+    "react-payment": "^0.1.8",
     "react-scripts": "^3.4.1",
     "react-transition-group": "^1.1.2"
   },

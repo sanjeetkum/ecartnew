@@ -130,7 +130,7 @@ class Header extends Component {
       <header>
         <div className="container">
           <div className="brand">
-            <img className="logo" src={logo} alt="Logo" />
+            BAZINGA
           </div>
 
           <div className="search">
@@ -186,8 +186,8 @@ class Header extends Component {
               {this.props.totalItems ? (
                 <span className="cart-count">{this.props.totalItems}</span>
               ) : (
-                ''
-              )}
+                  ''
+                )}
             </a>
             <div
               className={
